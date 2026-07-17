@@ -1,0 +1,11 @@
+langchain-community
+python-dotenv
+langchain-groq
+langchain-core
+langchain 
+pypdf
+faiss-cpu
+ipykernel
+langchain_huggingface
+sentence-transformers
+ragas
