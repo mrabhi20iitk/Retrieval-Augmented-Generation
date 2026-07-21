@@ -1,0 +1,80 @@
+RAG/
+│
+├── README.md
+├── requirements.txt
+├── .env
+├── .gitignore
+├
+│
+├── data/
+│   ├── raw/                    # Original PDFs, DOCX, TXT, CSV
+│   ├── processed/              # Cleaned/transformed documents
+│   └── sample/                 # Small sample files for testing
+│
+├── src/
+│   └── rag/
+│       ├── __init__.py
+│       │
+│       ├── config/
+│       │   ├── __init__.py
+│       │   └── settings.py     # Environment variables/configuration
+│       │
+│       ├── ingestion/
+│       │   ├── __init__.py
+│       │   ├── loaders.py      # PDF/document loading
+│       │   ├── cleaner.py      # Text preprocessing
+│       │   └── splitter.py     # Chunking
+│       │
+│       ├── embeddings/
+│       │   ├── __init__.py
+│       │   └── embedding_model.py
+│       │
+│       ├── vectorstore/
+│       │   ├── __init__.py
+│       │   └── store.py        # FAISS/Chroma/Pinecone logic
+│       │
+│       ├── retrieval/
+│       │   ├── __init__.py
+│       │   ├── retriever.py
+│       │   ├── hybrid.py
+│       │   └── reranker.py
+│       │
+│       ├── generation/
+│       │   ├── __init__.py
+│       │   ├── llm.py
+│       │   └── prompts.py
+│       │
+│       ├── chains/
+│       │   ├── __init__.py
+│       │   └── rag_chain.py
+│       │
+│       ├── evaluation/
+│       │   ├── __init__.py
+│       │   └── evaluator.py
+│       │
+│       └── utils/
+│           ├── __init__.py
+│           └── logger.py
+│
+├── scripts/
+│   ├── ingest.py               # Build/update vector index
+│   ├── query.py                # CLI query testing
+│   └── evaluate.py             # Run RAG evaluation
+│
+├── api/
+│   ├── __init__.py
+│   ├── main.py                 # FastAPI application
+│   ├── routes/
+│   │   └── query.py
+│   └── schemas/
+│       └── request_response.py
+│
+├── tests/
+│   ├── test_ingestion.py
+│   ├── test_retrieval.py
+│   └── test_rag_chain.py
+│
+├── notebooks/
+│   └── experiments.ipynb
+│
+└── vector_db/                  # Local FAISS/Chroma persistence

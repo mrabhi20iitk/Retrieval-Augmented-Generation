@@ -1,0 +1,6 @@
+.env
+*.env
+rag.egg-info
+pyproject.toml
+
+venv
