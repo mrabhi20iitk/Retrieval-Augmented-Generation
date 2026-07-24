@@ -4,3 +4,5 @@ rag.egg-info
 pyproject.toml
 
 venv
+
+test.ipynb

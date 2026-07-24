@@ -1,22 +1,28 @@
-from fastapi import FastAPI , HTTPException
-from src.rag.chains.rag_chain import  rag_chain_similarity , rag_chain_hybrid , rag_chain_muti_query
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
+from services.rag_service import ask
+
+
 class QueryRequest(BaseModel):
-    retriever : str
+    retriever: str
     question: str
 
 
 app = FastAPI()
 
-retrievers = {
-    "similarity" : rag_chain_similarity,
-    "hybrid" : rag_chain_hybrid,
-    "multi_query" : rag_chain_muti_query
-}
 
 @app.post("/query")
-def response(query: QueryRequest):
-    return {"question" : query.question,
-            "answer" : retrievers[query.retriever].invoke(query.question) }
+def query(request: QueryRequest):
 
+    try:
+        return ask(
+            question=request.question,
+            retriever_name=request.retriever
+        )
+
+    except ValueError as e:
+        raise HTTPException(
+            status_code=400,
+            detail=str(e)
+        )
