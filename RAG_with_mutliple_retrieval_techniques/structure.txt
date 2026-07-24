@@ -15,9 +15,6 @@ RAG/
 │   └── rag/
 │       ├── __init__.py
 │       │
-│       ├── config/
-│       │   ├── __init__.py
-│       │   └── settings.py     # Environment variables/configuration
 │       │
 │       ├── ingestion/
 │       │   ├── __init__.py
@@ -43,6 +40,7 @@ RAG/
 │       │   ├── __init__.py
 │       │   ├── llm.py
 │       │   └── prompts.py
+|       |   |___config.py
 │       │
 │       ├── chains/
 │       │   ├── __init__.py

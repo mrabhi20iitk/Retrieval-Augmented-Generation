@@ -1,0 +1,27 @@
+lets work on this . Current
+  ✓ Similarity
+  ✓ Hybrid
+  ✓ Multi-Query
+  ✓ FastAPI
+
+Next
+  ↓
+1. Add MMR and standalone BM25
+  ↓
+2. Add source citations to responses
+  ↓
+3. Add Parent Document Retriever
+  ↓
+4. Add Hybrid + Cross-Encoder Reranking
+  ↓
+5. Build retrieval evaluation framework
+  ↓
+6. Compare quality + latency
+  ↓
+7. Add metadata filtering
+  ↓
+8. Add logging/error handling
+  ↓
+9. Dockerize the application
+  ↓
+10. Add a simple UI
