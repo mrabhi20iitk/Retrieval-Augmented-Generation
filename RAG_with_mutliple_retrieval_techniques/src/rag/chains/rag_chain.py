@@ -21,32 +21,4 @@ def build_rag_chain(retriever):
         )
     return chain
 
-# rag_chain_similarity = (
-#     {"context" : similarity_retriever | format_docs,
-#      "input" : RunnablePassthrough() 
-#     }
-#     | prompt
-#     | llm
-#     | StrOutputParser()
-# )
-
-
-# rag_chain_muti_query = (
-#     {"context" : multi_query_retriever | format_docs,
-#      "input" : RunnablePassthrough() 
-#     }
-#     | prompt
-#     | llm
-#     | StrOutputParser()
-# )
-
-# rag_chain_hybrid = (
-#     {"context" : hybrid_retriever | format_docs,
-#      "input" : RunnablePassthrough() 
-#     }
-#     | prompt
-#     | llm
-#     | StrOutputParser()
-# )
-
 
